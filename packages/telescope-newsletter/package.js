@@ -16,8 +16,9 @@ Package.onUse(function (api) {
     'telescope-base', 
     'aldeed:simple-schema',
     'iron:router',
-    'mrt:mailchimp',
-    'tap:i18n'
+    'miro:mailchimp',
+    'tap:i18n',
+    'fourseven:scss'
   ], ['client', 'server']);
 
   api.use([
@@ -41,7 +42,7 @@ Package.onUse(function (api) {
   api.add_files([
     'lib/client/templates/newsletter_banner.html',
     'lib/client/templates/newsletter_banner.js',
-    'lib/client/templates/newsletter_banner.css'
+    'lib/client/stylesheets/newsletter_banner.scss'
   ], ['client']);
 
   api.add_files([
@@ -64,6 +65,6 @@ Package.onUse(function (api) {
   ], ["client", "server"]);
     
   api.export([
-
+    'resetNewsletterSchedule'
   ]);
 });
